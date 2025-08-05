@@ -1,0 +1,160 @@
+.privacy-page {
+  min-height: 100vh;
+  background: url('/HomePageBackground.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-container {
+  max-width: 600px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.privacy-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.privacy-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.privacy-header h1 {
+  color: #8BC34A;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+.privacy-header h1::before {
+  content: "🔒 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+  filter: drop-shadow(0 0 8px rgba(139, 195, 74, 0.6));
+}
+
+.privacy-content {
+  position: relative;
+  z-index: 2;
+}
+
+.privacy-content p {
+  color: #B0BEC5;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.privacy-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 0;
+}
+
+.privacy-content li {
+  color: #C8E6C9;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(55, 55, 65, 0.6), rgba(45, 49, 57, 0.6));
+  border-radius: 12px;
+  border: 1px solid rgba(139, 195, 74, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.privacy-content li:hover {
+  background: linear-gradient(135deg, rgba(65, 65, 75, 0.7), rgba(55, 59, 67, 0.7));
+  border-color: rgba(139, 195, 74, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.2);
+}
+
+.privacy-content strong {
+  color: #8BC34A;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(139, 195, 74, 0.4);
+}
+
+.privacy-footer {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(69, 90, 100, 0.6), rgba(84, 110, 122, 0.6));
+  border-radius: 16px;
+  border: 1px solid rgba(139, 195, 74, 0.2);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.privacy-footer p {
+  color: #C8E6C9;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2rem;
+  }
+  
+  .privacy-content p,
+  .privacy-content li {
+    font-size: 0.95rem;
+  }
+}

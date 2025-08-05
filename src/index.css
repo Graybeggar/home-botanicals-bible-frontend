@@ -1,0 +1,27 @@
+/* Base CSS to prevent overflow issues */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
+#root {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* Ensure all main content containers allow natural flow */
+main {
+  width: 100%;
+  min-width: 100%;
+}
+
+.homepage-background {
+  width: 100%;
+  min-width: 100%;
+}

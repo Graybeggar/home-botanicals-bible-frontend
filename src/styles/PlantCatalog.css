@@ -1,0 +1,385 @@
+/* Dark Night Garden Theme for Plant Catalog  animation: glow 3s ease-in-out infinite;
+}
+
+.catalog-header {ful glass-morphism catalog with botanical elements */
+
+.plant-catalog-page {
+  min-height: 100vh;
+  background: url('/PlantCatalogBackground.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.plant-catalog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add mystical decorative elements */
+.plant-catalog-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.plant-catalog-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.plant-catalog-title {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.plant-catalog-title::before {
+  content: "🌿 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+}
+
+/* Filters Section */
+.catalog-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.catalog-search-input {
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  backdrop-filter: blur(10px);
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.catalog-search-input::placeholder {
+  color: rgba(232, 245, 232, 0.7);
+}
+
+.catalog-search-input:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+}
+
+.catalog-select {
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  backdrop-filter: blur(10px);
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.catalog-select option {
+  background: #2d3748;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  padding: 0.5rem;
+  border: none;
+}
+
+.catalog-select:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+}
+
+.catalog-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.catalog-checkbox-label:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.2);
+}
+
+.catalog-checkbox {
+  accent-color: #8BC34A;
+}
+
+/* Loading State */
+.catalog-loading {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+}
+
+/* Plant List */
+.catalog-plant-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.catalog-plant-item {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  min-height: 220px;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.2), rgba(27, 94, 32, 0.2));
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(139, 195, 74, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-plant-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.15);
+  border-color: rgba(139, 195, 74, 0.5);
+}
+
+.catalog-plant-image {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  align-self: stretch;
+  border: 2px solid rgba(139, 195, 74, 0.3);
+}
+
+.catalog-plant-details {
+  flex: 1;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+}
+
+.catalog-plant-name {
+  margin: 0 0 0.5rem 0;
+  color: #8BC34A;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+}
+
+.catalog-plant-description {
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  color: #e8f5e8;
+  line-height: 1.6;
+}
+
+.catalog-plant-info {
+  margin: 0.3rem 0;
+  color: #C8E6C9;
+}
+
+.catalog-plant-info strong {
+  color: #8BC34A;
+  text-shadow: 0 0 5px rgba(139, 195, 74, 0.3);
+}
+
+/* Buttons */
+.catalog-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-btn-add {
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+  color: #fff;
+}
+
+.catalog-btn-add:hover {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.catalog-btn-remove {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  color: #fff;
+}
+
+.catalog-btn-remove:hover {
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4);
+}
+
+/* Pagination */
+.catalog-pagination {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+}
+
+.catalog-pagination-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.catalog-pagination-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+}
+
+.catalog-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.catalog-pagination-info {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
+}
+
+.catalog-page-numbers {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.catalog-page-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.catalog-page-btn.active {
+  border: 2px solid #8BC34A;
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.5), rgba(76, 175, 80, 0.5));
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.4);
+}
+
+.catalog-page-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plant-catalog-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .plant-catalog-container {
+    padding: 1.5rem;
+  }
+  
+  .plant-catalog-title {
+    font-size: 2rem;
+  }
+  
+  .catalog-filters {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .catalog-plant-item {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .catalog-plant-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .catalog-pagination {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

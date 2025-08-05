@@ -1,0 +1,180 @@
+
+.tip-of-the-day-container { /* Main container for Tip of the Day */
+  width: 100%; /* Full width */
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92)); /* Mystical dark gradient */
+  backdrop-filter: blur(20px); /* Glassmorphism blur effect */
+  border-radius: 20px; /* Rounded corners */
+  padding: 3rem; /* Large padding for spacious look */
+  border: 1px solid rgba(139, 195, 74, 0.3); /* Subtle green border */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1); /* Soft shadow and green glow */
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* Hide overflow for effects */
+  margin: 2rem auto; /* Center with vertical margin */
+}
+
+
+.tip-of-the-day-container::before { /* Sparkle emoji in top-right */
+  content: "✨"; /* Sparkle emoji */
+  position: absolute; /* Absolutely positioned */
+  top: 20px; /* 20px from top */
+  right: 25px; /* 25px from right */
+  font-size: 2rem; /* Large emoji */
+  opacity: 0.4; /* Faint effect */
+  z-index: 1; /* Behind content */
+  animation: sparkle 2s ease-in-out infinite; /* Sparkle animation */
+}
+
+
+.tip-of-the-day-container::after { /* Moon emoji in bottom-left */
+  content: "🌙"; /* Moon emoji */
+  position: absolute; /* Absolutely positioned */
+  bottom: 20px; /* 20px from bottom */
+  left: 25px; /* 25px from left */
+  font-size: 2.5rem; /* Larger emoji */
+  opacity: 0.5; /* Faint effect */
+  z-index: 1; /* Behind content */
+  animation: glow 3s ease-in-out infinite; /* Glow animation */
+}
+
+.tip-of-the-day-title {
+  color: #8BC34A;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.tip-of-the-day-title::before {
+  content: "💡 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+  filter: drop-shadow(0 0 8px rgba(139, 195, 74, 0.6));
+}
+
+.tip-of-the-day-container p {
+  color: #B0BEC5;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(55, 55, 65, 0.6), rgba(45, 49, 57, 0.6));
+  border-radius: 12px;
+  border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+.tip-save-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #8BC34A, #4CAF50, #CDDC39);
+  color: #1A1A1A;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  box-shadow: 0 8px 25px rgba(139, 195, 74, 0.4);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.tip-save-btn::before {
+  content: "💾 ";
+  margin-right: 0.5rem;
+}
+
+.tip-save-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(139, 195, 74, 0.6);
+  animation: pulse 0.6s ease-in-out;
+}
+
+.tip-save-btn.saved {
+  background: linear-gradient(135deg, #66BB6A, #81C784, #A5D6A7);
+  cursor: default;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(102, 187, 106, 0.3);
+}
+
+.tip-save-btn.saved::before {
+  content: "✅ ";
+}
+
+.tip-save-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+@keyframes pulse {
+  0% { transform: translateY(-3px) scale(1); }
+  50% { transform: translateY(-3px) scale(1.02); }
+  100% { transform: translateY(-3px) scale(1); }
+}
+
+.tip-saved-msg {
+  color: #A5D6A7 !important;
+  font-size: 0.95rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+  font-style: italic;
+  background: none !important;
+  padding: 0.5rem !important;
+  border: none !important;
+  text-shadow: 0 0 8px rgba(165, 214, 167, 0.4);
+}
+
+/* Loading and error states */
+.tip-of-the-day-container > p:first-of-type {
+  color: #C8E6C9;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem 0;
+  background: none;
+  padding: 1rem;
+  border: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .tip-of-the-day-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .tip-of-the-day-title {
+    font-size: 1.7rem;
+  }
+  
+  .tip-of-the-day-container p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .tip-save-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

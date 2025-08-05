@@ -1,0 +1,981 @@
+/* Dark Night Garden Theme for My Garden */
+/* Beautiful glass-morphism garden with botanical elements */
+
+.my-garden-page {
+  min-height: 100vh;
+  background: url('/NightLight.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.my-garden-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add mystical decorative elements */
+.my-garden-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.my-garden-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Fireflies Animation */
+@keyframes firefly1 {
+  0% { transform: translate(0, 0) scale(0.8); opacity: 0.6; }
+  25% { transform: translate(50vw, -20vh) scale(1); opacity: 1; }
+  50% { transform: translate(80vw, 30vh) scale(0.9); opacity: 0.7; }
+  75% { transform: translate(20vw, 60vh) scale(1.1); opacity: 0.9; }
+  100% { transform: translate(0, 0) scale(0.8); opacity: 0.6; }
+}
+
+@keyframes firefly2 {
+  0% { transform: translate(100vw, 50vh) scale(0.9); opacity: 0.7; }
+  25% { transform: translate(70vw, 10vh) scale(1.2); opacity: 1; }
+  50% { transform: translate(30vw, 80vh) scale(0.8); opacity: 0.6; }
+  75% { transform: translate(90vw, 40vh) scale(1); opacity: 0.8; }
+  100% { transform: translate(100vw, 50vh) scale(0.9); opacity: 0.7; }
+}
+
+@keyframes firefly3 {
+  0% { transform: translate(40vw, 90vh) scale(1); opacity: 0.8; }
+  25% { transform: translate(10vw, 20vh) scale(0.7); opacity: 0.5; }
+  50% { transform: translate(85vw, 70vh) scale(1.3); opacity: 1; }
+  75% { transform: translate(60vw, 15vh) scale(0.9); opacity: 0.7; }
+  100% { transform: translate(40vw, 90vh) scale(1); opacity: 0.8; }
+}
+
+@keyframes firefly4 {
+  0% { transform: translate(75vw, 25vh) scale(0.6); opacity: 0.4; }
+  25% { transform: translate(5vw, 75vh) scale(1.1); opacity: 0.9; }
+  50% { transform: translate(95vw, 5vh) scale(0.8); opacity: 0.6; }
+  75% { transform: translate(45vw, 85vh) scale(1); opacity: 0.8; }
+  100% { transform: translate(75vw, 25vh) scale(0.6); opacity: 0.4; }
+}
+
+@keyframes firefly5 {
+  0% { transform: translate(15vw, 60vh) scale(1.2); opacity: 1; }
+  25% { transform: translate(80vw, 90vh) scale(0.7); opacity: 0.5; }
+  50% { transform: translate(25vw, 10vh) scale(1); opacity: 0.8; }
+  75% { transform: translate(70vw, 55vh) scale(0.9); opacity: 0.7; }
+  100% { transform: translate(15vw, 60vh) scale(1.2); opacity: 1; }
+}
+
+/* Fireflies Elements */
+.my-garden-page::before {
+  content: "✨";
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 8px;
+  color: #fff700;
+  text-shadow: 0 0 10px #fff700, 0 0 20px #fff700, 0 0 30px #fff700;
+  pointer-events: none;
+  z-index: 10;
+  animation: firefly1 12s infinite ease-in-out;
+}
+
+.my-garden-page::after {
+  content: "⭐";
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 6px;
+  color: #ffeb3b;
+  text-shadow: 0 0 8px #ffeb3b, 0 0 16px #ffeb3b, 0 0 24px #ffeb3b;
+  pointer-events: none;
+  z-index: 10;
+  animation: firefly2 15s infinite ease-in-out 2s;
+}
+
+/* Additional fireflies using before/after on container */
+.my-garden-container {
+  position: relative;
+}
+
+.my-garden-title {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.my-garden-title::before {
+  content: "🌿 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+}
+
+/* Garden Header */
+.garden-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.garden-title {
+  margin-right: 1rem;
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+}
+
+.garden-search {
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  backdrop-filter: blur(10px);
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.garden-search::placeholder {
+  color: rgba(232, 245, 232, 0.7);
+}
+
+.garden-search:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+}
+
+.garden-room-label {
+  font-weight: bold;
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 5px rgba(139, 195, 74, 0.3);
+}
+
+.garden-room-select {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.garden-room-select option {
+  background: #2d3748;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  padding: 0.5rem;
+  border: none;
+}
+
+.garden-room-select:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+}
+
+/* Room Sections */
+.room-section {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.room-title {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px rgba(139, 195, 74, 0.5);
+  border-bottom: 2px solid rgba(139, 195, 74, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.room-title::before {
+  content: "🏠 ";
+  margin-right: 0.5rem;
+}
+
+/* Responsive grid for plant cards - Horizontal Layout */
+.plant-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.plant-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Plant Cards - Compact Horizontal Layout */
+.plant-card {
+  position: relative;
+  margin-bottom: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(139, 195, 74, 0.1);
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.8), rgba(40, 44, 52, 0.8));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.plant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 195, 74, 0.2);
+  border-color: rgba(139, 195, 74, 0.5);
+}
+
+.plant-image-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0;
+  margin-bottom: 0.8rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.plant-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(139, 195, 74, 0.3);
+  margin-bottom: 6px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  /* Prevent flickering during load */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: auto;
+  opacity: 1;
+  display: block;
+}
+
+.plant-img:hover {
+  box-shadow: 0 8px 20px rgba(139, 195, 74, 0.3);
+  border-color: rgba(139, 195, 74, 0.6);
+}
+
+.plant-details {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  min-width: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.plant-name {
+  margin: 0 0 4px 0;
+  color: #8BC34A;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(139, 195, 74, 0.5);
+}
+
+.plant-desc {
+  margin: 0 0 6px 0;
+  font-weight: 400;
+  color: #C8E6C9;
+  line-height: 1.3;
+  font-size: 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Care Instructions - Compact */
+.care-instructions {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.08), rgba(76, 175, 80, 0.08));
+  border: 1px solid rgba(139, 195, 74, 0.15);
+  border-radius: 8px;
+  padding: 0.6rem;
+  margin-bottom: 6px;
+  backdrop-filter: blur(3px);
+}
+
+.care-instructions > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.care-instructions > div:last-child {
+  margin-bottom: 0;
+}
+
+.care-instructions strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #8BC34A;
+  font-weight: bold;
+}
+
+/* Form Elements - Compact */
+.last-watered-row,
+.last-watered-edit-row,
+.next-water-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  color: #e8f5e8;
+  font-size: 0.8rem;
+}
+
+.edit-btn,
+.save-btn {
+  margin-left: 6px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+  transform: translateY(-1px);
+}
+
+.date-input {
+  margin-right: 8px;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
+}
+
+.room-select-label,
+.notes-label,
+.custom-pic-label {
+  display: block;
+  margin: 6px 0;
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(139, 195, 74, 0.3);
+  font-size: 0.85rem;
+}
+
+.room-select {
+  margin-left: 4px;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  font-size: 0.8rem;
+}
+
+.room-select option {
+  background: #2d3748;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  padding: 0.5rem;
+  border: none;
+}
+
+.notes-textarea {
+  width: 90%;
+  margin-top: 3px;
+  border-radius: 6px;
+  padding: 0.5rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  backdrop-filter: blur(10px);
+  resize: vertical;
+  font-size: 0.8rem;
+  min-height: 40px;
+  max-height: 60px;
+}
+
+.notes-textarea::placeholder {
+  color: rgba(232, 245, 232, 0.7);
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: rgba(139, 195, 74, 0.6);
+  box-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+}
+
+.custom-pic-input {
+  margin-left: 8px;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+}
+
+.delete-img-btn {
+  margin-left: 12px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid #c62828;
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  color: #fff;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.delete-img-btn:hover {
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(198, 40, 40, 0.4);
+}
+
+/* Action Buttons - Compact */
+.action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.care-tips-btn {
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.care-tips-btn:hover {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.care-tips-btn::before {
+  content: "💡 ";
+  margin-right: 0.3rem;
+}
+
+.watered-btn {
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #29b6f6, #0288d1);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px 10px rgba(2, 136, 209, 0.3);
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.watered-btn:hover {
+  background: linear-gradient(135deg, #0288d1, #0277bd);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 136, 209, 0.4);
+}
+
+.watered-btn::before {
+  content: "💧 ";
+  margin-right: 0.3rem;
+}
+
+.remove-btn {
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px 10px rgba(198, 40, 40, 0.3);
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.remove-btn:hover {
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4);
+}
+
+.remove-btn::before {
+  content: "🗑️ ";
+  margin-right: 0.3rem;
+}
+
+/* Modal Styling */
+.care-tips-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.care-tips-modal {
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(139, 195, 74, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 90vw;
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.care-tips-modal::before {
+  content: "🌿";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.care-tips-modal h3 {
+  color: #8BC34A;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+}
+
+.care-tips-close-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  color: #fff;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.2);
+}
+
+.care-tips-close-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.6), rgba(76, 175, 80, 0.6));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 195, 74, 0.3);
+}
+
+/* Additional classes for component cleanup */
+
+/* Hidden file input */
+.hidden-input {
+  display: none;
+}
+
+/* Main layout grid */
+.garden-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Empty state text */
+.empty-state-text {
+  text-align: center;
+  color: #8BC34A;
+  font-size: 1.2rem;
+}
+
+.empty-state-text.small {
+  font-size: 1.1rem;
+}
+
+/* Plant card button container */
+.plant-card-buttons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Custom edit button */
+.custom-edit-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.custom-edit-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Custom delete button */
+.custom-delete-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #c62828;
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  color: #fff;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.custom-delete-btn:hover {
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(198, 40, 40, 0.4);
+}
+
+/* Care instruction items */
+.care-instruction-item {
+  margin-bottom: 4px;
+  color: #C8E6C9;
+}
+
+.care-instruction-item:last-child {
+  margin-bottom: 0px;
+}
+
+/* Last watered row styling */
+.last-watered-row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  display: flex;
+}
+
+/* Last watered edit row */
+.last-watered-edit-row {
+  margin-bottom: 3px;
+}
+
+/* Next water row */
+.next-water-row {
+  justify-content: flex-start;
+  margin-bottom: 4px;
+}
+.edit-date-btn {
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.edit-date-btn:hover {
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.4), rgba(76, 175, 80, 0.4));
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Next water row */
+.next-water-row {
+  justify-content: flex-start;
+  margin-bottom: 4px;
+}
+
+/* Label spacing */
+.label-spacing {
+  margin: 4px 0;
+}
+
+/* Textarea sizing */
+.textarea-sizing {
+  min-height: 30px;
+  max-height: 40px;
+}
+
+/* Action row spacing */
+.action-row-spacing {
+  margin-top: 6px;
+}
+
+/* Saved tips layout */
+.saved-tips-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Saved tip card */
+.saved-tip-card {
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.8), rgba(40, 44, 52, 0.8));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Tip content layout */
+.tip-content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Tip icon */
+.tip-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+/* Tip text content */
+.tip-text-content {
+  flex: 1;
+}
+
+/* Tip title */
+.tip-title {
+  color: #8BC34A;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Tip text */
+.tip-text {
+  color: #C8E6C9;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+/* Remove tip button */
+.remove-tip-btn {
+  background: linear-gradient(135deg, #ef5350, #c62828);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-tip-btn:hover {
+  background: linear-gradient(135deg, #c62828, #b71c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .my-garden-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .my-garden-container {
+    padding: 1.5rem;
+  }
+  
+  .my-garden-title {
+    font-size: 2rem;
+  }
+  
+  .garden-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .plant-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .plant-image-col {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .action-row {
+    justify-content: center;
+  }
+  
+  .notes-textarea {
+    width: 100%;
+  }
+  
+  /* Reduce firefly movement on mobile */
+  .my-garden-page::before,
+  .my-garden-page::after,
+  .my-garden-container::before,
+  .my-garden-container::after {
+    font-size: 4px !important;
+  }
+}
+
+/* Additional Fireflies using garden elements */
+.garden-title::before {
+  content: "✨";
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 6px;
+  color: #e1bee7;
+  text-shadow: 0 0 8px #e1bee7, 0 0 16px #e1bee7, 0 0 24px #e1bee7;
+  pointer-events: none;
+  z-index: 12;
+  animation: firefly5 22s infinite ease-in-out 8s;
+}
+
+/* Magical twinkling effect for room titles */
+.room-title:nth-child(odd)::after {
+  content: "⭐";
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 4px;
+  color: #fff59d;
+  text-shadow: 0 0 6px #fff59d, 0 0 12px #fff59d, 0 0 18px #fff59d;
+  pointer-events: none;
+  z-index: 11;
+  animation: firefly1 16s infinite ease-in-out 10s;
+}
+
+.room-title:nth-child(even)::after {
+  content: "✨";
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 5px;
+  color: #b39ddb;
+  text-shadow: 0 0 7px #b39ddb, 0 0 14px #b39ddb, 0 0 21px #b39ddb;
+  pointer-events: none;
+  z-index: 11;
+  animation: firefly3 14s infinite ease-in-out 12s;
+}

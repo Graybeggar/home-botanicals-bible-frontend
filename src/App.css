@@ -1,0 +1,9 @@
+.app-container { /* Main app layout container */
+  min-height: 100vh; /* Ensure app takes full viewport height */
+  display: flex; /* Use flexbox for vertical layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.app-main { /* Main content area, grows to fill space */
+  flex: 1; /* Allow main to expand and fill available space */
+}

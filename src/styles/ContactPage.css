@@ -1,0 +1,346 @@
+/* ========================================
+   CONTACT PAGE STYLES
+   Dark mystical garden theme with form elements
+   ======================================== */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  --font-primary: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --color-primary: #8BC34A;
+  --color-text-light: #E8F5E8;
+  --color-text-muted: #C8E6C9;
+  --gradient-bg-dark: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  --gradient-input: linear-gradient(135deg, rgba(55, 55, 65, 0.8), rgba(45, 49, 57, 0.8));
+  --gradient-button: linear-gradient(135deg, #8BC34A, #4CAF50, #CDDC39);
+  --border-primary: 1px solid rgba(139, 195, 74, 0.3);
+  --radius-small: 12px;
+  --radius-medium: 16px;
+  --radius-large: 20px;
+  --shadow-primary: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+}
+
+/* ===== PAGE LAYOUT ===== */
+.contact-page {
+  min-height: 100vh;
+  background: url('/HomePageBackground.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== MAIN CONTAINER & DECORATIVE ELEMENTS ===== */
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  background: var(--gradient-bg-dark);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-large);
+  padding: 3rem;
+  border: var(--border-primary);
+  box-shadow: var(--shadow-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative sparkle element (top-right) */
+.contact-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Decorative moon element (bottom-left) */
+.contact-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* ===== HEADER SECTION ===== */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Page title with gradient text effect */
+.contact-header h1 {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: var(--gradient-button);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+/* Plant emoji prefix for title */
+.contact-header h1::before {
+  content: "🌿 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: var(--color-primary);
+  filter: drop-shadow(0 0 8px rgba(139, 195, 74, 0.6));
+}
+
+/* Subtitle/description text */
+.contact-header p {
+  color: #B0BEC5;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* ===== FORM STRUCTURE & INPUT FIELDS ===== */
+.contact-form {
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual form field containers */
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Form field labels */
+.form-group label {
+  display: block;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* Input fields and textareas base styling */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: var(--border-primary);
+  border-radius: var(--radius-small);
+  background: var(--gradient-input);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text-light);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder text styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #78909C;
+  font-style: italic;
+}
+
+/* Focus state for input fields */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(65, 65, 75, 0.9), rgba(55, 59, 67, 0.9));
+  box-shadow: 0 0 20px rgba(139, 195, 74, 0.3), inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Textarea specific settings */
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== SUBMIT BUTTON & BUTTON ANIMATIONS ===== */
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient-button);
+  color: #1A1A1A;
+  border: none;
+  border-radius: var(--radius-medium);
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  box-shadow: 0 8px 25px rgba(139, 195, 74, 0.4);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+/* Rocket emoji prefix for submit button */
+.submit-btn::before {
+  content: "🚀 ";
+  margin-right: 0.5rem;
+}
+
+/* Button hover effects */
+.submit-btn:hover {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(139, 195, 74, 0.6);
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Button active (clicked) state */
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== CONTACT INFO SECTION ===== */
+.contact-info {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(69, 90, 100, 0.6), rgba(84, 110, 122, 0.6));
+  border-radius: var(--radius-medium);
+  border: var(--border-primary);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact info section heading */
+.contact-info h3 {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* Star emoji prefix for contact info heading */
+.contact-info h3::before {
+  content: "💫 ";
+  margin-right: 0.5rem;
+}
+
+/* Contact info text */
+.contact-info p {
+  color: var(--color-text-muted);
+  font-family: var(--font-primary);
+  margin: 0.5rem 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+/* ===== FORM VALIDATION & ERROR MESSAGES ===== */
+/* Error message styling */
+.error-message {
+  color: #FF6B6B;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== DROPDOWN & SELECT ELEMENTS ===== */
+/* Select dropdown styling */
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: var(--border-primary);
+  border-radius: var(--radius-small);
+  background: var(--gradient-input);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text-light);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Select dropdown focus state */
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(65, 65, 75, 0.9), rgba(55, 59, 67, 0.9));
+  box-shadow: 0 0 20px rgba(139, 195, 74, 0.3), inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Select dropdown options */
+.form-group select option {
+  background: #2D3142;
+  color: var(--color-text-light);
+  padding: 0.5rem;
+}
+
+/* ===== CHECKBOX & INTERACTIVE ELEMENTS ===== */
+/* Checkbox styling */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Checkbox input field */
+.checkbox-input {
+  width: auto !important;
+  margin-right: 0.5rem;
+  accent-color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* ===== LINKS & INTERACTIVE TEXT ===== */
+/* Email link styling */
+.email-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Email link hover effect */
+.email-link:hover {
+  color: #CDDC39;
+  text-shadow: 0 0 8px rgba(139, 195, 74, 0.6);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
+}

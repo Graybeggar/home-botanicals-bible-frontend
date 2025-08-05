@@ -1,0 +1,33 @@
+/* ========================================
+   APP GLOBAL STYLES
+   Base styling for the entire React application
+   ======================================== */
+
+/* ===== ROOT CONTAINER SETUP ===== */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* ===== MAIN CONTENT CONTAINER ===== */
+/* Ensure main content doesn't overflow */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== HOMEPAGE SPECIFIC LAYOUTS ===== */
+/* Fix for homepage specific layout issues */
+.homepage-background main {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* ===== GENERAL UTILITY CLASSES ===== */
+.card {
+  padding: 2em;
+}

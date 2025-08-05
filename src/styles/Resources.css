@@ -1,0 +1,185 @@
+.resources-page {
+  min-height: 100vh;
+  background: url('/HomePageBackground.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resources-container {
+  max-width: 800px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.resources-container::before { /* Sparkle emoji in top-right */
+  content: "✨"; /* Sparkle emoji */
+  position: absolute; /* Absolutely positioned */
+  top: 20px; /* 20px from top */
+  right: 25px; /* 25px from right */
+  font-size: 2rem; /* Large emoji */
+  opacity: 0.4; /* Faint effect */
+  z-index: 1; /* Behind content */
+  animation: sparkle 2s ease-in-out infinite; /* Sparkle animation */
+}
+
+
+.resources-container::after { /* Moon emoji in bottom-left */
+  content: "🌙"; /* Moon emoji */
+  position: absolute; /* Absolutely positioned */
+  bottom: 20px; /* 20px from bottom */
+  left: 25px; /* 25px from left */
+  font-size: 2.5rem; /* Larger emoji */
+  opacity: 0.5; /* Faint effect */
+  z-index: 1; /* Behind content */
+  animation: glow 3s ease-in-out infinite; /* Glow animation */
+}
+
+
+.resources-header { /* Header section for Resources page */
+  text-align: center; /* Center text */
+  margin-bottom: 2.5rem; /* Space below header */
+  position: relative; /* For stacking context */
+  z-index: 2; /* Above background effects */
+}
+
+
+.resources-header h2 { /* Main Resources title */
+  color: #8BC34A; /* Green accent */
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Modern font */
+  font-size: 2.5rem; /* Large title */
+  font-weight: 300; /* Light weight */
+  margin-bottom: 1rem; /* Space below */
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5); /* Green glow */
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50); /* Gradient text */
+  -webkit-background-clip: text; /* Clip for gradient */
+  -webkit-text-fill-color: transparent; /* Transparent fill for gradient */
+  background-clip: text; /* Standard background clip */
+  letter-spacing: 1px; /* Spaced letters */
+}
+
+.resources-header h2::before {
+  content: "📚 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+  filter: drop-shadow(0 0 8px rgba(139, 195, 74, 0.6));
+}
+
+.resources-header p {
+  color: #B0BEC5;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.resources-content {
+  position: relative;
+  z-index: 2;
+}
+
+.resources-section {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(55, 55, 65, 0.6), rgba(45, 49, 57, 0.6));
+  border-radius: 16px;
+  border: 1px solid rgba(139, 195, 74, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resources-section:hover {
+  background: linear-gradient(135deg, rgba(65, 65, 75, 0.7), rgba(55, 59, 67, 0.7));
+  border-color: rgba(139, 195, 74, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 195, 74, 0.15);
+}
+
+.resources-section h3 {
+  color: #8BC34A;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.resources-section h3::before {
+  content: "🔧 ";
+  margin-right: 0.5rem;
+}
+
+.resources-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.resources-list li {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, rgba(45, 45, 55, 0.4), rgba(35, 39, 47, 0.4));
+  border-radius: 8px;
+  border: 1px solid rgba(139, 195, 74, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resources-list li:hover {
+  background: linear-gradient(135deg, rgba(55, 55, 65, 0.6), rgba(45, 49, 57, 0.6));
+  border-color: rgba(139, 195, 74, 0.3);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.1);
+}
+
+.resources-list a {
+  color: #C8E6C9;
+  text-decoration: none;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.resources-list a:hover {
+  color: #8BC34A;
+  text-shadow: 0 0 8px rgba(139, 195, 74, 0.4);
+}
+
+.resources-list a:visited {
+  color: #A5D6A7;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .resources-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .resources-header h2 {
+    font-size: 2rem;
+  }
+  
+  .resources-section {
+    padding: 1.5rem;
+  }
+  
+  .resources-list a {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,73 @@
+/* ========================================
+   SHARED ANIMATIONS
+   Common keyframe animations used across the application
+   ======================================== */
+
+/* ===== PAGE ENTRANCE ANIMATIONS ===== */
+/* Heading animation */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide in from left */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Fade and scale card */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===== DECORATIVE ANIMATIONS ===== */
+/* Sparkle rotation animation for mystical elements */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: rotate(0deg); }
+  50% { opacity: 0.8; transform: rotate(180deg); }
+}
+
+/* Glow brightness animation for moon and star elements */
+@keyframes glow {
+  0%, 100% { opacity: 0.5; filter: brightness(1); }
+  50% { opacity: 0.8; filter: brightness(1.5); }
+}
+
+/* ===== BUTTON ANIMATIONS ===== */
+/* Pulse animation for interactive elements */
+@keyframes pulse {
+  0% { transform: translateY(-3px) scale(1); }
+  50% { transform: translateY(-3px) scale(1.02); }
+  100% { transform: translateY(-3px) scale(1); }
+}
+
+/* ===== CARD ANIMATIONS ===== */
+/* Fade in and slide up animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SPECIAL EFFECTS ===== */
+/* Falling leaf effect */
+.falling-leaf {
+  position: fixed;
+  pointer-events: none;
+  font-size: 2rem;
+  animation: fall-leaf 2s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall-leaf {
+  0%   { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  80%  { opacity: 1; transform: translateY(80vh) rotate(360deg) scale(1.2); }
+  100% { opacity: 0; transform: translateY(100vh) rotate(720deg) scale(0.8); }
+}

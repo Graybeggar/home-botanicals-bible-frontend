@@ -1,0 +1,182 @@
+/* ========================================
+   FEATURED PLANTS SECTION STYLES
+   Dark mystical garden theme with plant cards
+   ======================================== */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  --font-primary: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --color-primary: #8BC34A;
+  --color-text-light: #B0BEC5;
+  --gradient-button: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+}
+
+
+/* ===== SECTION: Featured Plants Layout ===== */
+.featured-plants-section {
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+/* ===== SECTION: Featured Plants Container ===== */
+.featured-plants-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.3), rgba(40, 44, 52, 0.3)), url('/TodaysFeaturedPlants.gif') center center no-repeat;
+  background-size: auto, cover;
+  background-attachment: scroll, local;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ===== DECORATIVE: Sparkle Emoji (Top Right) ===== */
+.featured-plants-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+
+/* ===== DECORATIVE: Moon Emoji (Bottom Left) ===== */
+.featured-plants-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+
+/* ===== COMPONENT: Featured Plant Card ===== */
+.featured-plant-card {
+  background: linear-gradient(135deg, rgba(55, 55, 65, 0.4), rgba(45, 49, 57, 0.4));
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== INTERACTION: Plant Card Hover State ===== */
+.featured-plant-card:hover {
+  background: linear-gradient(135deg, rgba(65, 65, 75, 0.9), rgba(55, 59, 67, 0.9));
+  border-color: rgba(139, 195, 74, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(139, 195, 74, 0.2);
+}
+
+
+/* ===== COMPONENT: Plant Card Image ===== */
+.featured-plant-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border: 1px solid rgba(139, 195, 74, 0.2);
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+
+/* ===== COMPONENT: Plant Card Title ===== */
+.featured-plant-card h3 {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.4);
+  letter-spacing: 0.5px;
+}
+
+
+/* ===== COMPONENT: Plant Card Description ===== */
+.featured-plant-card p {
+  color: var(--color-text-light);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+
+/* ===== SECTION: Featured Plants Title ===== */
+.featured-plants-title {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: var(--gradient-button);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===== DECORATIVE: Star Emoji (Title Prefix) ===== */
+.featured-plants-title::before {
+  content: "🌟 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: var(--color-primary);
+  filter: drop-shadow(0 0 8px rgba(139, 195, 74, 0.6));
+}
+
+
+/* ===== RESPONSIVE DESIGN: Mobile Styles ===== */
+@media (max-width: 768px) {
+  .featured-plants-section {
+    padding: 1rem;
+  }
+  
+  .featured-plants-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .featured-plants-title {
+    font-size: 1.8rem;
+  }
+  
+  .featured-plant-card {
+    padding: 1.2rem;
+  }
+  
+  .featured-plant-image {
+    height: 220px;
+  }
+}

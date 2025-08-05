@@ -1,0 +1,66 @@
+/* Apply background to multiple elements to ensure it shows */
+.homepage-background,
+body,
+html,
+#root {
+  background: url('/HomePageBackground.gif') center center no-repeat fixed, linear-gradient(135deg, #2d5016, #4a7c26) !important;
+  background-size: cover !important;
+  min-height: 100vh;
+}
+
+.homepage-background {
+  min-height: calc(100vh - 120px);
+  width: 100%;
+  position: relative;
+}
+
+.homepage-main {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Side-by-side layout for top section */
+.homepage-top-section {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto 0.5rem auto;
+  align-items: flex-start;
+}
+
+/* Adjust TipOfTheDay container for side-by-side layout */
+.homepage-top-section .tip-of-the-day-container {
+  flex: 0 0 400px; /* Fixed width for tip */
+  margin: 0; /* Remove auto margin */
+}
+
+/* Adjust FeaturedPlants container for side-by-side layout */
+.homepage-top-section .featured-plants-section {
+  flex: 0 1 800px; /* Max width of 800px, can shrink if needed */
+  padding: 0; /* Remove extra padding */
+}
+
+.homepage-top-section .featured-plants-container {
+  margin: 0; /* Remove auto margin */
+}
+
+/* Mobile responsive - stack vertically on smaller screens */
+@media (max-width: 1024px) {
+  .homepage-top-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .homepage-top-section .tip-of-the-day-container {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .homepage-top-section .featured-plants-section {
+    width: 100%;
+  }
+}

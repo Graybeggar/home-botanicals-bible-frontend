@@ -1,0 +1,51 @@
+
+/* ===== FOOTER LAYOUT & CONTAINER ===== */
+.footer {
+  margin-top: auto;
+  padding: 2rem 1rem 1rem 1rem;
+  background: transparent;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* ===== FOOTER LINKS SECTION ===== */
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+
+.footer-links a {
+  margin-right: 2rem;
+  color: #1b5e20;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+
+.footer-links a:hover {
+  color: #2e7d32;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+
+.footer-links a:last-child {
+  margin-right: 0;
+}
+
+
+/* ===== FOOTER COPYRIGHT SECTION ===== */
+.footer-copyright {
+  color: #1b5e20;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}

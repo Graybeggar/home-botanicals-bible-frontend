@@ -1,0 +1,215 @@
+/* ========================================
+   ABOUT PAGE - DARK NIGHT GARDEN THEME
+   Beautiful glass-morphism garden with botanical elements
+   ======================================== */
+
+/* ===== PAGE LAYOUT & BACKGROUND ===== */
+.about-page {
+  min-height: 100vh;
+  background: url('/HomePageBackground.gif') center center no-repeat fixed;
+  background-size: cover;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+/* ===== MAIN CONTAINER & GLASS EFFECT ===== */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(25, 25, 35, 0.92), rgba(40, 44, 52, 0.92));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 195, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+/* Add mystical decorative elements */
+.about-container::before {
+  content: "✨";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  opacity: 0.4;
+  z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.about-container::after {
+  content: "🌙";
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  z-index: 1;
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* ===== PAGE TITLE STYLING ===== */
+.about-section h1 {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(139, 195, 74, 0.5);
+  background: linear-gradient(45deg, #8BC34A, #CDDC39, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-section h1::before {
+  content: "🌿 ";
+  margin-right: 0.5rem;
+  -webkit-text-fill-color: #8BC34A;
+}
+
+/* ===== CONTENT GRID LAYOUT ===== */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== CARD BASE STYLING ===== */
+.about-card {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.2), rgba(27, 94, 32, 0.2));
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(139, 195, 74, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== CARD HOVER EFFECTS ===== */
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 195, 74, 0.2);
+  border-color: rgba(139, 195, 74, 0.5);
+}
+
+/* ===== CARD HEADING STYLING ===== */
+.about-card h2 {
+  color: #8BC34A;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
+}
+
+/* ===== CARD TEXT CONTENT ===== */
+.about-card p {
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-card ul {
+  color: #e8f5e8;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+.about-card li {
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-card li::marker {
+  color: #8BC34A;
+}
+
+/* ===== CREATOR CARD SPECIAL STYLING ===== */
+.creator-card {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(139, 195, 74, 0.15), rgba(76, 175, 80, 0.15));
+  border: 2px solid rgba(139, 195, 74, 0.4);
+  position: relative;
+}
+
+.creator-card::before {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+.creator-card p:first-of-type {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #8BC34A;
+  text-shadow: 0 0 10px rgba(139, 195, 74, 0.4);
+}
+
+.creator-card p:nth-of-type(2) {
+  color: #C8E6C9;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.creator-card p:last-of-type {
+  font-style: italic;
+  color: #e8f5e8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .about-container {
+    padding: 2rem;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .about-section h1 {
+    font-size: 2rem;
+  }
+  
+  .about-card {
+    padding: 1.5rem;
+  }
+  
+  .about-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .about-card p,
+  .about-card ul {
+    font-size: 1rem;
+  }
+}
+
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+.about-card:nth-child(3) { animation-delay: 0.3s; }
+.about-card:nth-child(4) { animation-delay: 0.4s; }
